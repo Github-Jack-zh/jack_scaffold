@@ -1,0 +1,31 @@
+{
+    "name": "jack/scaffold",
+    "description": "基于dcatAdmin的代码生成工具的扩展，省去了后期单独处理权限菜单的繁琐",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/jack/scaffold",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "代码生成工具",
+            "email": "1010418447@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jack\\Scaffold\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Jack\\Scaffold\\ScaffoldServiceProvider",
+        "laravel": {
+            "providers": [
+                "Jack\\Scaffold\\ScaffoldServiceProvider"
+            ]
+        }
+    }
+}
